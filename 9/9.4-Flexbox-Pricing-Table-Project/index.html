@@ -11,9 +11,137 @@
       font-family: 'Sono', sans-serif;
     }
 
-    /* Hint: What can you do with a media query and flexbox? */
+    .pricing-container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      height: 100vh;
+      /* text-align: center; */
+    }
+
+
+    /*Mine*/
+    /* .pricing-plan{
+      background-color: rgb(237, 235, 235);
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      padding: 2rem;
+    } */
+
+
+        /*lesson*/
+    .pricing-plan{
+      /* background-color: rgb(237, 235, 235); */
+      /* display: flex; */
+      /* flex-direction: column; */
+      /* align-items: center; */
+      /* justify-content: center; */
+      /* width: auto; */
+      background-color: #f2f2f2;
+      max-width: 400px;
+      flex: 1;
+      padding: 2rem;
+      border-radius: .5rem;
+      text-align: center;
+
+    }
+
+    /* Mine */
+    /* .plan-title{
+      font-weight: 800;
+      font-size: 25px;
+    } */
+
+
+
+    /* lesson */
+    .plan-title{
+      /* font-weight: 800; */
+      font-weight: bold;
+      /* font-size: 25px; */
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    /* Mine */
+    /* .plan-price{
+      font-weight: 800;
+      font-size: 45px;
+    } */
+
+    /*  lesson*/
+    .plan-price{
+      /* font-weight: 800; */
+      font-weight: bold;
+      /* font-size: 45px; */
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    /*Mine*/
+    /* .plan-features{
+      list-style: none;
+      line-height: 2;
+    } */
+
+    /*Lesson*/
+    .plan-features{
+      list-style: none;
+      /* line-height: 2; */
+      padding: 0;
+      margin: 0;
+    }
+
+    .plan-features > * {
+      margin-bottom: 20px;
+    }
+
+    /* Mine */
+    /* .plan-button{
+      color: white;
+      background-color:  #ff6600;
+      border: none;
+      height: 2rem;
+      border-radius: .4rem;
+      width: 4rem;
+      align-items: center;
+    } */
+
+        /* lesson */
+    .plan-button{
+      /* color: white; */
+      color: #fff;
+      background-color:  #ff6600;
+      border: none;
+      /* height: 2rem; */
+      padding: 10px;
+      /* border-radius: .4rem; */
+      border-radius: 5px;
+      /* width: 4rem; */
+      /* align-items: center; */
+    }
+
+
+      /* Mine */
+    /* @media (max-width: 1250px) {
+      .pricing-container{
+        display: flex;
+        flex-direction: column;
+      }
+    } */
+
+    /* Lesson */
     @media (max-width: 1250px) {
-      
+      .pricing-container{
+        /* display: flex; */
+        flex-direction: column;
+        height: 100%;
+      }
     }
   </style>
 </head>
