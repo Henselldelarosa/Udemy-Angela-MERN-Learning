@@ -37,10 +37,15 @@
 
     .astronaut {
       background-color: #03989E;
+      /* everything be default has an order of 0
+         by setting the order to a higher value
+         it will move the column to another one*/
       order: 1;
 
       /* TODO: Make the astronaut box look like the goal2 image. */
       /* code for this exercise */
+      /* short hand for grid-column-start and rid-column
+         it will start on column 2 and end will be auto*/
       grid-column: span 2;
     }
   </style>
