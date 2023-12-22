@@ -1,0 +1,17 @@
+//Todo
+.container => extra small => less than 576px screen size => Foldeble Mobile
+
+.container-sm => Small => greater than or equal 576px screen size => Mobile
+
+.container-md => Medium => Less than or equal 768px screen size => Ipad
+
+.container-lg => Large => Less than or equal 992px screen size => Laptop
+
+.container-xl => X-Large=> Less than or equal 1200px screen size => Desktop
+
+.container-xxl => XX-Large => Less than or equal 1400px screen size => TV
+
+.container-fluid => => 100% screen size
+
+*All columns must have a class name that starts with *col* it goes up to *col-12*
+

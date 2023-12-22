@@ -1,0 +1,27 @@
+Bootstap Breakpoints
+
+-Available Breakpoints
+Bootstrap includes six default breakpoints, sometimes reffered to as grid tiers, for building
+responsively. These breakpoints can be customized if you're using our source Sass files.
+
+BreakPoints                      Class infix                    Dimensions
+Extra Small                          None                     less than 576px
+
+Small                                 sm                      greater than or equal 576px
+
+Medium                                md                      greater than or equal 768px
+
+Large                                 lg                      greater than or equal 992px
+
+Extra Large                           xl                      greater than or equal 1200px
+
+Extra Extra Lardge                    xxl                     greater than or equal 1400px
+
+*after the class name of *col* your define the size as *col-sm and so on* and to number *col-sm-1 and so on*
+
+-Multiple BreakPoints
+[col-sm-12 col-md-8 col-lg-4]
+
+Small devices it should take 12/12 of the width
+Medium devices it should take 8/12 of the width
+Large devices it should take 4/12 of the width
