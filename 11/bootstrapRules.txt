@@ -1,0 +1,20 @@
+*Getting layouts that you want
+1-Go to Examples and choose what you want
+2-Open the chroom dev-tools and hover until
+  you get the seccion that you want.
+3-Copy the code and past it into your HTML file.
+
+*Styling components and icons
+1-Open the Chroom dev-tools
+2-Hover over the feature that you want to style
+3-Choose the css styling and past it into your
+  HTML style element or into your css file.
+
+*Using icons
+1-Go to the Icon session
+2-Choose the desired icons
+3-save it into your file as an image
+4-Change the <svg> element on the code to
+  an <img> element
+5-in the *src=''* session provide the path to the
+  saved image
