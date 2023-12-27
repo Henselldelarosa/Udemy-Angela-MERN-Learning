@@ -1,7 +1,11 @@
-Buttons
+-Buttons
 * Can be used by creating a *<button><button/>* html element
-  and and giving it the class of *btn* and by adding the class
-  for the color scheme you may want to choose
+* and and giving it the class of *btn* and by adding the class
+* for the color scheme you may want to choose
+
+-Variants
+* Bootstrap includes several button variants, each serving its own semantic
+* purpose, with a few extras thrown in for more control.
   1.<button type="button" class="btn btn-primary">Primary</button> => Blue
   2.<button type="button" class="btn btn-secondary">Secondary</button> => Gray
   3.<button type="button" class="btn btn-success">Success</button> => Green
@@ -11,3 +15,16 @@ Buttons
   7.<button type="button" class="btn btn-light">Light</button> => White
   8.<button type="button" class="btn btn-dark">Dark</button> => Black
   9.<button type="button" class="btn btn-link">Link</button> =>
+
+-Outline buttons
+* In need of a button, but not the hefty background colors they bring? Replace the
+* default modifier classes with the .btn-outline-* ones to remove all background
+* images and colors on any button.
+<button type="button" class="btn btn-outline-primary">Primary</button>
+<button type="button" class="btn btn-outline-secondary">Secondary</button>
+<button type="button" class="btn btn-outline-success">Success</button>
+<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-outline-warning">Warning</button>
+<button type="button" class="btn btn-outline-info">Info</button>
+<button type="button" class="btn btn-outline-light">Light</button>
+<button type="button" class="btn btn-outline-dark">Dark</button>
