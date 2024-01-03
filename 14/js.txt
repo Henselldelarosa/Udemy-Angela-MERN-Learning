@@ -1,0 +1,9 @@
+*Data Types
+1. Strings = ""
+
+2. Numbers = 1234...
+
+3. Boolean = true or false
+
+*Variables
+-"Variables are used to store data into for later reused"
