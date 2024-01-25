@@ -1,0 +1,9 @@
+# Properties
+1. innerHTML
+2. style
+3. firstChild
+
+# Methods
+1. click()
+2. appendChild()
+3. setAttribute()
