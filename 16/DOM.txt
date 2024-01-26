@@ -7,3 +7,6 @@
 1. click()
 2. appendChild()
 3. setAttribute()
+
+# adding class
+document.querySelector('h1').classList.toggle('huge')
