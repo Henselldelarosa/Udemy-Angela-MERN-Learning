@@ -1,0 +1,19 @@
+Construction Function
+
+1. Create a function but instead of the name having the first letter lower make it upper
+  * function BellBoy(){}
+
+2. pass the paramethers
+  * function BellBoy(name, age, hasWorkPermit, languages){}
+
+3. Insde the Construction Function match the paramethers to property names.
+   *function BellBoy(name, age, hasWorkPermit, languages){
+    this.name = name;
+    this.age = age;
+    this.hasWorkPermit = hasWorkPermit;
+    this.languages = languages;
+   }
+
+Initialise object
+const bellBoy1 = new BellBoy('Timmy', 19, true, ['French', 'English']);
+const bellBoy2 = new BellBoy('Jimmy', 21, false, ['English', 'German']);
