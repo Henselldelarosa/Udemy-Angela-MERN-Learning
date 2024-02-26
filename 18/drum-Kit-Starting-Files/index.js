@@ -3,17 +3,6 @@ let audio = new Audio(`sounds/tom-1.mp3`)
 audio.play()
 }
 
-// for(let i = 0 ; i< document.querySelectorAll('.drum').length; i++){
-//   let button = document.querySelectorAll('button')[i].addEventListener('click', handleCLick)
-//   console.log(this)
-// }
-
-// or
-/*
-
-*/
-
-// get all the class with the name of drum
 var numberOfDrumButtons = document.querySelectorAll('.drum').length
 
 // loop through through all those values
@@ -21,8 +10,16 @@ for(let i = 0 ; i < numberOfDrumButtons; i++){
   document.querySelectorAll('.drum')[i].addEventListener('click', function(){
 
     var buttonClicked = this.innerHTML
-    // like a if else statement but will listen for what key was clicked
-    switch (buttonClicked) {
+    keyPressed(buttonClicked)
+  })
+}
+
+
+// ! Lesson 144
+
+const keyPressed = (key) => {
+     // like a if else statement but will listen for what key was clicked
+     switch (key) {
       case 'w':{
       let audio = new Audio('sounds/tom-1.mp3')
       audio.play()
@@ -67,7 +64,8 @@ for(let i = 0 ; i < numberOfDrumButtons; i++){
 
       default: console.log(buttonClicked)
     }
-
-    // this.style.color='white'
-  })
 }
+
+document.addEventListener('keydown', function(e){
+  keyPressed(e.key)
+})
