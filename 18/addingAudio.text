@@ -1,0 +1,10 @@
+Adding sound to event listener
+1. Create a variable
+2. Create a new Audio object
+  * const audio = new Audio()
+
+3. Pass the name of the file you want to play
+  * Const audio = new Audio('audio_file.mp3')
+
+4. Then call the method .play()
+  * audio.play()
