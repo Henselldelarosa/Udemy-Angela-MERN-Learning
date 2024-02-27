@@ -11,6 +11,7 @@ for(let i = 0 ; i < numberOfDrumButtons; i++){
 
     var buttonClicked = this.innerHTML
     keyPressed(buttonClicked)
+    buttonAnimation(buttonClicked)
   })
 }
 
@@ -68,4 +69,15 @@ const keyPressed = (key) => {
 
 document.addEventListener('keydown', function(e){
   keyPressed(e.key)
+  buttonAnimation(e.key)
 })
+
+const buttonAnimation = (currentKey) => {
+  
+  let activeButton = document.querySelector('.' + currentKey)
+  activeButton.classList.add("pressed")
+
+  setTimeout(() => {
+    activeButton.classList.remove('pressed')
+  }, 100);
+}

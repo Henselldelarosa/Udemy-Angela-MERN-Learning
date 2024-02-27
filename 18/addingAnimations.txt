@@ -1,0 +1,12 @@
+const buttonAnimation = (currentKey) => {
+  # this gets the class that starts with '.' with whar key is pressed
+  let activeButton = document.querySelector('.' + currentKey)
+
+  # this adds the the class of 'pressed to add the animation'
+  activeButton.classList.add("pressed")
+
+  # this removes the class after .1 sec
+  setTimeout(() => {
+    activeButton.classList.remove('pressed')
+  }, 100);
+}

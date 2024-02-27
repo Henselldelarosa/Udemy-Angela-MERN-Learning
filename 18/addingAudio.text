@@ -8,3 +8,8 @@ Adding sound to event listener
 
 4. Then call the method .play()
   * audio.play()
+
+
+  # Notes
+  DO NOT USE addEventListener('keypress') use
+  USE addEventListener('keydown')
