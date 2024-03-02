@@ -1,0 +1,46 @@
+*Selecting Tags with class names
+$('h1.className')
+
+*Styling
+$('h1').css('color', 'colorName')
+
+*Adding a Class to a Tag
+$('h1').addClass('big-title')
+
+*Best Practice
+#Don't style classes directly on the js file
+# create a class in the css file and add that class
+# to what you want to style
+
+*Remove class
+$('h1').removeClass('big-title')
+
+*Adding Multiple classes
+$('h1').addClass('big-title margin-50')
+
+*To Check if an Element has a class
+$('h1').hasClass('margin-50')
+
+*Chaging the text of a selected element
+1. $('h1').text('anything')
+2. $('h1').html('anything')
+# Using .html also allows to add tags
+  1. $('h1').html('<em>Hey</em>')
+
+*Targeting attributs
+$('img').attr('src')
+
+*Setting Attributes
+$('img').attr('src', 'img/drum.png')
+
+*Adding Event Listener
+$('h1').click(function(){
+  $('h1').css('color', 'red')
+})
+
+*Animating
+$('h1').on('mouseover', function(){
+  $('h1').animate({rotate: '180deg'})
+})
+# Can only add animations that has numeric values
+# Can't add colors
