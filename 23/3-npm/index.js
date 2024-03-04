@@ -6,3 +6,5 @@ import superheroes from'superheroes'
 
 const name = superheroes.random()
 console.log(`My hero name is ${name}`)
+
+'hey'
