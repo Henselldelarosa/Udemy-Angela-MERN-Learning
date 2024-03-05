@@ -1,0 +1,30 @@
+# Creating an Express Server
+1. Create a directory.
+2. Create index.js file.
+3. initialize NPM.
+4. Install the Express Packages.
+5. Write Server application in index.js.
+6. Start server.
+
+<The File where the server will run must be called index.js>
+
+# Starting Express
+import express from 'express'
+
+const app = express()
+
+app.listen(300, () => {
+  console.log('Server is running on port 3000')
+})
+
+<Run 'node (fileName)'>
+
+# To find out what ports are being used run this on terminal
+*Windows
+<netstat -ano | findstr "LISTENING">
+
+Mac/Linux
+<sudo isof -i -P -n | Listen>
+
+# Request Vocab
+1. GET = Request resource
