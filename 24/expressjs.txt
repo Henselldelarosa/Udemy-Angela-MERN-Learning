@@ -28,3 +28,19 @@ Mac/Linux
 
 # Request Vocab
 1. GET = Request resource
+2. POST = Sending resource
+3. PUT = Replace resource
+4. PATCH = Patch up a resource
+5. DELETE = Delete resources
+
+*Difference between <PUT> and <PATCH>
+is that <PUT> is creating a new resource
+while <PATCH> is just fixing a broken resource
+
+# Changes to file
+<Everytime Changes you need to stop the server and then restart>
+
+# Using Nodemon
+*Having to stop the server everytime you make updates
+is a problem to fix this use <nodemon>
+to install <npm install -g nodemon>
