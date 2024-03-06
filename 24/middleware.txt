@@ -12,3 +12,12 @@
 It's used to parce incoming bodies in a middleware before
 your handlers, abailable under the <req.body.property>
 *Commonly used to handle form data.
+
+# Creating own Middleware
+<app.use((req, res, next) => {
+  console.log('Request Method:', req.method)
+  next()
+})>
+* because there could be multiple middleware the next() function
+* determines when to move on from the middleware and continue the
+* flow of the server handlers.

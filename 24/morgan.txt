@@ -1,0 +1,4 @@
+# Morgan
+* Morgan is a middleware that is used for logging run time
+1. app.use(morgan('tiny')) = GET / 200 5 - 3.141 ms
+2. app.use(morgan('combined')) = ::1 - - [06/Mar/2024:06:55:39 +0000] "GET / HTTP/1.1" 200 5 "-" "PostmanRuntime/7.35.0"
