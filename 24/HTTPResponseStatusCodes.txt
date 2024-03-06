@@ -1,0 +1,13 @@
+# Status Code Responses
+1 (100 - 199) - Information Responses
+2 (200 - 299) - Succesful Responses
+3 (300 - 399) = Redirect Responses
+4 (400 - 499) = Client error Responses
+5 (500 - 599) = Server error Responses
+
+# HTTP return codes cheat sheet
+1** Hold on im sending
+2** Here you go
+3** Go away
+4** You messed up
+5** I messed up

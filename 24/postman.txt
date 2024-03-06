@@ -1,0 +1,5 @@
+# Running Postman
+<Get Request>
+1 Run server on terminal
+2 On the enter Url bar enter localhost:3000
+3 After step 2 enter the get request for the page you want
