@@ -1,0 +1,14 @@
+# Middleware
+<What can Middleware do?>
+1 Middleware can pre-process the request
+2 Loggin the request
+  * How long it took to perform the request
+  * What type of request <GET>, <PUT>, <POST> etcetera.
+  * What is the status of the request being handled?
+3 Authentication
+4 Errors
+
+# Body parcer
+It's used to parce incoming bodies in a middleware before
+your handlers, abailable under the <req.body.property>
+*Commonly used to handle form data.
