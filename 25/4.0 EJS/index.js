@@ -6,25 +6,21 @@ const port = 3000
 
 const today = new Date()
 const day = today.getDay()
-const dayNames = ['Sunday', 'Monday','Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
-const weekdayArr = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
-const weekendArr =['Sunday', 'Saturday']
-let weekend = ''
-let weekday = ''
+let message = 'a weekday'
+let advice = "It's time to work hard"
 
-if(weekdayArr.includes[dayNames[day]]) {
-  weekday = weekday + dayNames[day]
+if(day === 0 || day === 6) {
+  message = "the weekend"
+  advice =  "It's time to have some fun"
 }
-else{
-  weekend = weekend + dayNames[day]
-}
-console.log(weekday, weekend)
+
+console.log(today)
 
 app.get('/', (req, res) => {
   res.render('index.ejs',
-  {dayType: 'a weekend,',
-   advice: "It's time to work hard"}
+  {dayType: `${message}`,
+   advice: `${advice}`}
   )
 })
 
