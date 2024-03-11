@@ -1,0 +1,66 @@
+# EJS Tags
+1. <%= variable %> JS Output
+2. <% console.log('hello') %> JS Execute
+3. <%- <h1>hello</h1> %>  Render HTML
+4. <%% %%> Show <% OR %>
+5. <%# This is a comment %> Stop Execution
+6. <%- include('header.ejs') %> Insert another EJS file
+
+
+# What if thers no Data?
+<% if (fruits) { %>
+  <ul>
+    <% fruits.forEach((fruit)) => { %>
+      <li>
+        <%= items[i] %>
+      </li>
+    <% } %>
+
+  </ul>
+<%}%>
+
+* This wont work because EJS doesnt check if a data
+* exists before Execution
+Instead add the <local> variable
+<% if (local.fruits) { %>
+  <ul>
+    <% fruits.forEach((fruit)) => { %>
+      <li>
+        <%= items[i] %>
+      </li>
+    <% } %>
+
+  </ul>
+<%}%>
+
+* local is a way to assess all the variables that get send over
+* when you use res.render
+
+
+# Sending data from EJS to Server
+* This could be done by using a post request
+(EJS)
+<form action="/sybmit" method='POST'>
+   <input
+   type='text'
+   name='fName'
+   placeHolder='First Name'
+   >
+
+   <input
+   type='text'
+   name='lName'
+   placeHolder='Last Name'
+   >
+
+   <input
+   type='submit'
+   value='OK'
+   >
+</form>
+
+(JS)
+app.post('/submit', (req, res) => {
+  res.render('index.ejs',
+  {name: req.body['fName']})
+})
