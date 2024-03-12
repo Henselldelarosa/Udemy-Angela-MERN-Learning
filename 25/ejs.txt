@@ -64,3 +64,23 @@ app.post('/submit', (req, res) => {
   res.render('index.ejs',
   {name: req.body['fName']})
 })
+
+# Partials & Layouts
+
+- Static Files
+ <All static files should be placed in a public folder>
+  * Static files are those that don't change such as
+    1. Images
+    2. CSS style Sheets
+    3. Audio
+    4. Videos
+
+  * In order to tell JS to use the static files you must use
+    app.use(express.static('public'))
+
+  <Stopping Repeated Code with EJS>
+  * To stop the use of repeated code and make it dynamic
+    we can use partials for a Sample he Header.
+    <%- include('header.ejs')%>
+    and a footer
+    <%- include('footer.ejs')>
