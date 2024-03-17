@@ -1,0 +1,37 @@
+# Intro to API's
+*Application Programming interfaces
+
+# What do API do?
+*   An api bridges communication between two pieces of software. This is done making request from your
+* application to another to get certain data that are currently using into your application.
+* This is done by making get request to this other application and with the api you are informed if what
+* kind of response you could expect.
+
+# Examples of API's
+1. GraphQL
+2. SOAP
+3. REST:API
+4. gRPC
+
+# Formating API Requests
+*Endpoints, Path Parameters and Query Parameters
+
+# API Endpoints
+1. Query Parameters
+  <bored-api.appbrewery.com/endpoint?query=value>
+  <bored-api.appbrewery.com> = base URL
+  <endpoint> = endpoint
+  <?> = before starting your first query you need a question mark
+        after the endpoint
+  <query=value> = query Parameters in key value pair
+
+2. Multiple Query Parameters
+  <bored-api.appbrewery.com/endpoint?query=value&query2=value2>
+  <&> = adding this sign will allow you to query for Multiple values
+  <query2=value2> = Without any spaces after the "&" sign add the next value
+
+
+3. Path Parameters
+  <bored-api.appbrewery.com/endpoint/{path-parameter}>
+    * The path parameter could be something such like a name
+      or and id
