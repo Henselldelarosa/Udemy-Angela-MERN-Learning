@@ -1,0 +1,49 @@
+<Server Side API Request>
+* Making requests from server using Node and Axios
+
+# Axios vs https module>
+* HTTPS Module
+import https from "https"
+
+app.get("/", (req, res) => {
+  const options ={
+    hostname: "bored-api.appbrewery.com",
+    path: "/random",
+    method: 'GET',
+  }
+
+  const request = https.req(options, (response) => {
+    let data = "";
+    response.on("data", (chunck) => {
+      data += chunck
+    })
+
+  response.on('end', () => {
+    try{
+      const response = await axios.get("https://bored-api.appbrewery.com/random");
+      res.render('index.ejs', {activity: response.data});
+    }catch(error){
+      console.error("Failed to make request:", error.message);
+      res.status(500).send("Failed to fetch activity. Please try again.")
+    }
+  })
+})
+
+request.on("error", (error) => {
+  console.error("Failed to make request:", error.message);
+  res.status(500).send("Failed to fetch activity. Please try again.")
+  })
+  request.end()
+})
+# -----------------------------
+* Axios
+import axios from "axios"
+app.get("/", async (req,res) => {
+  try{
+    const response = await axios.get("https://bored-api.appbrewery.com/random");
+    res.render('index.ejs', {activity: response.data});
+  }catch(error){
+    console.error("Failed to make request:", error.message);
+    res.status(500).send("Failed to fetch activity. Please try again.")
+  }
+});
