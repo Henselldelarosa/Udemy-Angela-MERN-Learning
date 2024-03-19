@@ -17,21 +17,22 @@ app.get("/", (req, res) => {
   res.render("index.ejs", {recipe: passedData});
 });
 
+console.log(JSON.parse(recipeJSON)[0])
 app.post("/recipe", (req, res) => {
   //Step 3: Write your code here to make this behave like the solution website.
-  const data = JSON.parse(recipeJSON)
+
   switch (req.body.choice) {
-    case 'chicken':{
-      return passedData = JSON.parse(recipeJSON)[0]
-    }
+    case 'chicken':
+       passedData = JSON.parse(recipeJSON)[0]
+    break
 
-    case 'beef': {
-      return passedData = JSON.parse(recipeJSON)[1]
-    }
+    case 'beef':
+       passedData = JSON.parse(recipeJSON)[1]
+    break
 
-    case 'beef': {
-      return passedData = JSON.parse(recipeJSON)[2]
-    }
+    case 'fish':
+       passedData = JSON.parse(recipeJSON)[2]
+    break
 
     default:
     console.log('Something went wrong')
