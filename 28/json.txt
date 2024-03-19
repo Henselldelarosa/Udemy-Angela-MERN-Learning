@@ -1,0 +1,24 @@
+# What is JSON?
+*JavaScript Objext Notation
+
+<JSON vs JS Object>
+*   The main difference of javascript Object and JSON is that
+* JS Object are set as key value pairs and the object will be
+* returned in a bulky way. JSON are set as string key value pair
+* which allow for the values to be returned flatten. This is helpful
+* because when is sent throught the internet it will be its
+* minimum size and once it reaches the other size it could be
+* re-expanded to its normal size.
+
+<JSON Visualizer>
+*   When JSON is sent through the internet is hard to read because
+* it will be in its flatten form. To make it more readable we could
+* use a JSON Visualizer.
+"jsonviewer.stack.hu"
+
+<JS Object to JSON>
+const jsonData = JSON.stringify(data)
+
+
+<JSON to JS Object>
+const data = JSON.parse(jsonData)
