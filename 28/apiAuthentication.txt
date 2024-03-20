@@ -1,2 +1,23 @@
 <API Authentication>
 * Authenticating yourself with API provider
+
+1. No Authentication
+  * Usually have a limit to how many request could be made
+  * Public API
+
+2. Basic Authentication
+  * You have an account with the API provider
+  * Requires and email/username and password
+  * Uses a base64 Encoding
+3. API Key Authorization
+  * Different from Authentication
+  * When you Authenticate yourself is when you show you an user
+  * Authorization is when you are authorize to view or do certain things
+4. Token Based Authentication
+  *
+
+# Base64 Encoding
+It grabs a piece of text and encodes into bits,
+then it grabs text and turns it into base64 encoded.
+The base64 encoding works by turning into different
+characters usually adding extra characters
