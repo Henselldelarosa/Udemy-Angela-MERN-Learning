@@ -2,7 +2,8 @@ import express from "express";
 import axios from "axios";
 
 const app = express();
-const port = 3000;
+const port = 4000;
+const yourBearerToken = "5a1cde03-6eff-417a-bf12-fd87e6fc6481";
 
 app.use(express.static("public"));
 
