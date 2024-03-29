@@ -35,6 +35,7 @@ let posts = [
 let lastId = 3;
 
 // Middleware
+app.use(express.static('public'))
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -49,19 +50,51 @@ app.get('/posts', (req, res) => {
 //CHALLENGE 2: GET a specific post by id
 
 app.get('/posts/:id', (req, res) =>{
-  const id = parseInt(req.params.id) -1
-  const wantedPost = posts[id]
+  const post = posts.find((p) => p.id === parseInt(req.params.id));
+  if (!post) return res.status(404).json({ message: "Post not found" });
+  res.json(post);
+})
 
-  if(!wantedPost)  return res.status(404).json({ message: "Post not found" });
+//CHALLENGE 3: POST a new post'
+
+app.post('/posts', (req, res) => {
+  const newId = lastId += 1;
+  const createPost = {
+    id: newId,
+    title: req.body.title,
+    content: req.body.content,
+    author: req.body.author,
+    date: new Date()
+  }
+
+  lastId = newId
+  posts.push(createPost)
+
+  res.json(createPost)
+})
+
+//CHALLENGE 4: PATCH a post when you just want to update one parameter
+
+app.patch('/posts/:id', (req, res) => {
+  const wantedPost = posts.find((post) => post.id === parseInt(req.params.id))
+  if (!wantedPost) return res.status(404).json({ message: "Post not found" });
+  if (req.body.title) wantedPost.title = req.body.title;
+  if (req.body.content) wantedPost.content = req.body.content;
+  if (req.body.author) wantedPost.author = req.body.author;
 
   res.json(wantedPost)
 })
 
-//CHALLENGE 3: POST a new post
-
-//CHALLENGE 4: PATCH a post when you just want to update one parameter
-
 //CHALLENGE 5: DELETE a specific post by providing the post id.
+
+app.delete('/posts/:id', (req,res) => {
+  const deletePost = posts.find((post) => post.author.id === parseInt(req.params.id))
+  const postIndex = posts.findIndex((p) => p.id === parseInt(req.params.id));
+  if (postIndex === -1) return res.status(404).json({ message: "Post not found" });
+
+  posts.splice( postIndex, 1)
+  res.json({message: "Post deleted"})
+})
 
 app.listen(port, () => {
   console.log(`API is running at http://localhost:${port}`);
