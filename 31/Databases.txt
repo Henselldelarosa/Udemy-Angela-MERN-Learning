@@ -1,0 +1,20 @@
+<SQL VS NOSQL>
+- Type of Database
+# SQL = Structure Query Language
+# NoSQL = Not Only Structure Query Language
+
+
+1. SQL Database
+  1. Data us stored in tables
+  2. Can form relations
+  * Oracle
+  * Postgress
+  * SQLite
+  * MySQL
+
+2. NoSQL Database
+  1. Flexible
+  2. Can change the Structure of the databse without having to redo the whole Database
+  - Mongodb
+  - Dynomo
+  - Radis
