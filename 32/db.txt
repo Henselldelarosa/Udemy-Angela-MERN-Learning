@@ -1,0 +1,20 @@
+<Database>
+
+# Creating a Table
+CREATE TABLE tablenames (
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+)
+
+# Inserting DATA into table
+INSERT INTO products (id, name, price)
+VALUES (1, 'Rubber', 1.30)
+
+# Specifying what field to insert into
+INSERT INTO products (id, name)
+VALUES (1, 'Rubber')
+
+# NOT NULL
+"Fields on the table that can't be null can't be left empty"
